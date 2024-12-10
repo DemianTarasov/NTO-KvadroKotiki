@@ -28,7 +28,7 @@
 Для  запуска всех скриптов необходимо скачать файлы с нашего репозитория.
 ```bash
 cd Desktop
-git clone http://github.com/
+git clone https://github.com/DemianTarasov/NTO-KvadroKotiki.git
 ```
 Перейдя в проводник, перетащите все файлы из скаченной папки на рабочий стол.
 ## 2. Настройка симулятора. 
