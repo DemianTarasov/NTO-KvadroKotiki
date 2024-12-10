@@ -39,8 +39,12 @@ git clone https://github.com/DemianTarasov/NTO-KvadroKotiki.git
 
 Для настройки симулятора был написан скрипт, который выполняет следующие действия: 
 	- Скачивает из репозитория [bart02/dronepoint: Dronepoint Gazebo Models](https://github.com/bart02/dronepoint) модели зданий и устанавливает их в необходимую папку `models`. 
-	- Проверяет, существует ли Aruco-карта с тем же названием из файла `clover_aruco.world` в папке `aruco_pose/map` 
-	- Если карта существует, то скрипт вносит изменения в `aruco.launch`, где в том числе меняет название карты, а также вносит параметр размера маркера из файла карты `.txt`
+	- Проверяем, существует ли Aruco-карта с тем же названием из файла `clover_aruco.world` в папке `aruco_pose/map` 
+		- если карта не существует, необходимо отредактировать файл  `clover.launch`, который находится в  `~/catkin_ws/src/clover/clover/launch/`; необходимо изменить строчку  `<arg name = "aruco" default="false"/>` на  `<arg name = "aruco" default="true"/>` - это активирует работу aruco_map. Затем заходим в файл  `aruco.launch` и изменяем три строчки, должно получиться так:  
+			- `<arg name = "aruco_detect" default="true"/>`
+			- `<arg name = "aruco_map" default="true"/>`
+			- `<arg name = "aruco_vpe" default="true"/>`
+		- Если карта существует, то скрипт вносит изменения в `aruco.launch`, где в том числе меняет название карты, а также вносит параметр размера маркера из файла карты `.txt`
 	- Вносит необходимые изменения в файл `clover.launch`.
 
 > [!IMPORTANT]
