@@ -34,16 +34,9 @@ cd Desktop
 git clone https://github.com/DemianTarasov/NTO-KvadroKotiki.git
 ```
 Перейдя в проводник, перетащите все файлы из скаченной папки на рабочий стол.
-## 2. Настройка симулятора. 
-Для того, чтобы наши программы успешно работали, необходимо включить режим позиционирования `aruco_map`. Для этого неоюходимо:
- 
-    - отредактировать файл  `clover.launch`, который находится в  `~/catkin_ws/src/clover/clover/launch/`; необходимо изменить строчку  `<arg name = "aruco" default="false"/>` на  `<arg name = "aruco" default="true"/>` - это активирует работу aruco_map.
-    - зайти в файл  `aruco.launch` и изменить три строчки, должно получиться так:  
-    	- `<arg name = "aruco_detect" default="true"/>`
-    	- `<arg name = "aruco_map" default="true"/>`
-   	- `<arg name = "aruco_vpe" default="true"/>`
-После этой процедуры у нас включается навигация по `aruco_map` и мы можем приступать к следующему шагу.
-      
+
+## 2. Настройка симулятора.   
+
 Для настройки симулятора был написан скрипт, который выполняет следующие действия: 
 - Скачивает из репозитория [bart02/dronepoint: Dronepoint Gazebo Models](https://github.com/bart02/dronepoint) модели зданий и устанавливает их в необходимую папку `models`.
 - Проверяет, существует ли Aruco-карта с тем же названием из файла `clover_aruco.world` в папке `aruco_pose/map`
