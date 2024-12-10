@@ -53,7 +53,7 @@ git clone https://github.com/DemianTarasov/NTO-KvadroKotiki.git
 Затем копируем скрипт `launch.py` в ВМ на рабочий стол. 
 Вызываем терминал из рабочего стола, либо переходим с помощью команды и вызываем скрипт.
 ```bash
-cd Desktop
+cd Desktop #Если вы все ещё не находитесь в данной дериктории - перейдите в неё
 python3 launch.py
 ```
 
@@ -138,7 +138,7 @@ root.write(cloverPath)  # Записываем изменения обратно
 - Откройте терминал и вызовите следующие команды:
 ```bash
 cd Desktop #Если вы все ещё не находитесь в данной дериктории - перейдите в неё
-python3 house.py
+python3 houses.py
 ```
 - Запустите Gazebo 
 
